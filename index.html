@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historia Sądownictwa Wojskowego 1915–1947</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          paper: '#F1EBDC',
+          paperdark: '#E6DEC9',
+          ink: '#221D17',
+          cream: '#FBF8F1',
+          gold: '#A8874F',
+          crimson: { DEFAULT: '#8C1D2B', deep: '#6B141F' },
+        },
+        fontFamily: {
+          display: ['"Cormorant Garamond"', 'serif'],
+          body: ['"PT Serif"', 'serif'],
+          mono: ['"IBM Plex Mono"', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  .grain{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @keyframes fadeUp{ from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:translateY(0);} }
+  @media (prefers-reduced-motion: no-preference){
+    .fade-up{ animation:fadeUp .8s ease forwards; opacity:0; }
+  }
+</style>
+</head>
+<body class="font-body antialiased text-ink bg-paper bg-[radial-gradient(circle_at_20%_20%,rgba(0,0,0,0.025)_0%,transparent_40%),radial-gradient(circle_at_80%_60%,rgba(0,0,0,0.03)_0%,transparent_45%)]">
+
+<div class="grain fixed inset-0 z-40 pointer-events-none opacity-5 mix-blend-multiply"></div>
+
+<!-- NAV -->
+<nav class="fixed top-0 inset-x-0 z-30 bg-paper/90 backdrop-blur border-b border-ink/15">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between">
+    <span class="font-mono text-[9px] sm:text-[11px] uppercase tracking-[0.15em] sm:tracking-[0.25em] text-ink/70">Archiwum · 1915–1947</span>
+
+    <!-- Hamburger button (mobile) -->
+    <button id="menuBtn" class="md:hidden flex flex-col gap-[5px] p-2 -mr-2" aria-label="Menu">
+      <span class="block w-5 h-[1.5px] bg-ink transition-all duration-300" id="bar1"></span>
+      <span class="block w-5 h-[1.5px] bg-ink transition-all duration-300" id="bar2"></span>
+      <span class="block w-5 h-[1.5px] bg-ink transition-all duration-300" id="bar3"></span>
+    </button>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex gap-6 lg:gap-10 font-mono text-[11px] lg:text-[13px] uppercase tracking-widest text-ink/95">
+
+      <div class="group relative">
+        <a href="#o-nas" class="relative pb-[5px] hover:text-crimson transition-colors
+                  after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-[2px] after:h-px after:bg-crimson
+                  after:scale-x-0 after:origin-center after:transition-transform after:duration-200
+                  group-hover:after:scale-x-100">
+          O nas <span class="inline-block ml-1 text-[10px] transition-transform duration-200 group-hover:rotate-180">▾</span>
+        </a>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1.5 min-w-[230px] py-3
+                    bg-paper border border-ink/15 shadow-[0_14px_28px_-12px_rgba(34,29,23,0.32)]
+                    opacity-0 pointer-events-none transition-all duration-200
+                    group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0">
+          <a href="#patron" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Patron</a>
+          <a href="#instytut" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Instytut</a>
+          <a href="#kontakt" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Kontakt</a>
+          <a href="#poszukujemy" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Poszukujemy</a>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <a href="#audytoriat" class="relative pb-[5px] hover:text-crimson transition-colors
+                  after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-[2px] after:h-px after:bg-crimson
+                  after:scale-x-0 after:origin-center after:transition-transform after:duration-200
+                  group-hover:after:scale-x-100">
+          Audytoriat <span class="inline-block ml-1 text-[10px] transition-transform duration-200 group-hover:rotate-180">▾</span>
+        </a>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1.5 min-w-[230px] py-3
+                    bg-paper border border-ink/15 shadow-[0_14px_28px_-12px_rgba(34,29,23,0.32)]
+                    opacity-0 pointer-events-none transition-all duration-200
+                    group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0">
+          <a href="#organizacja" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Organizacja</a>
+          <a href="#sklad-osobowy" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Skład osobowy</a>
+          <a href="#straty" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Straty bezpowrotne</a>
+          <a href="#biogramy" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Biogramy</a>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <a href="#zrodla-prawa" class="relative pb-[5px] hover:text-crimson transition-colors
+                  after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-[2px] after:h-px after:bg-crimson
+                  after:scale-x-0 after:origin-center after:transition-transform after:duration-200
+                  group-hover:after:scale-x-100">
+          Źródła prawa <span class="inline-block ml-1 text-[10px] transition-transform duration-200 group-hover:rotate-180">▾</span>
+        </a>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1.5 min-w-[230px] py-3
+                    bg-paper border border-ink/15 shadow-[0_14px_28px_-12px_rgba(34,29,23,0.32)]
+                    opacity-0 pointer-events-none transition-all duration-200
+                    group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0">
+          <a href="#i-wojna" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">I wojna światowa</a>
+          <a href="#okres-wojen" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Okres wojen 1918–1921</a>
+          <a href="#miedzywojnie" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Okres międzywojnia</a>
+          <a href="#ii-wojna" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">II wojna światowa</a>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <a href="#literatura" class="relative pb-[5px] hover:text-crimson transition-colors
+                  after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-[2px] after:h-px after:bg-crimson
+                  after:scale-x-0 after:origin-center after:transition-transform after:duration-200
+                  group-hover:after:scale-x-100">
+          Literatura <span class="inline-block ml-1 text-[10px] transition-transform duration-200 group-hover:rotate-180">▾</span>
+        </a>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1.5 min-w-[230px] py-3
+                    bg-paper border border-ink/15 shadow-[0_14px_28px_-12px_rgba(34,29,23,0.32)]
+                    opacity-0 pointer-events-none transition-all duration-200
+                    group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0">
+          <a href="#ksiazki" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Książki</a>
+          <a href="#artykuly" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Artykuły</a>
+          <a href="#recenzje" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Recenzje</a>
+          <a href="#nowosci" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Nowości wydawnicze</a>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <a href="#archiwalia" class="relative pb-[5px] hover:text-crimson transition-colors
+                  after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-[2px] after:h-px after:bg-crimson
+                  after:scale-x-0 after:origin-center after:transition-transform after:duration-200
+                  group-hover:after:scale-x-100">
+          Archiwalia <span class="inline-block ml-1 text-[10px] transition-transform duration-200 group-hover:rotate-180">▾</span>
+        </a>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1.5 min-w-[230px] py-3
+                    bg-paper border border-ink/15 shadow-[0_14px_28px_-12px_rgba(34,29,23,0.32)]
+                    opacity-0 pointer-events-none transition-all duration-200
+                    group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0">
+          <a href="#dokumenty" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Dokumenty</a>
+          <a href="#fotografie" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Fotografie</a>
+          <a href="#pieczecie" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Pieczęcie</a>
+          <a href="#zasob" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Zasób archiwalny</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="md:hidden hidden border-t border-ink/15 bg-paper/95 backdrop-blur">
+    <div class="max-h-[70vh] overflow-y-auto px-4 py-4 space-y-1">
+
+      <div class="mobile-accordion">
+        <button class="w-full flex items-center justify-between py-3 font-mono text-[11px] uppercase tracking-widest text-ink/90 border-b border-ink/10">
+          O nas <span class="text-[10px] transition-transform duration-200">▾</span>
+        </button>
+        <div class="hidden pl-4 pb-2 space-y-1">
+          <a href="#patron" class="block py-2 text-xs text-ink/75 hover:text-crimson">Patron</a>
+          <a href="#instytut" class="block py-2 text-xs text-ink/75 hover:text-crimson">Instytut</a>
+          <a href="#kontakt" class="block py-2 text-xs text-ink/75 hover:text-crimson">Kontakt</a>
+          <a href="#poszukujemy" class="block py-2 text-xs text-ink/75 hover:text-crimson">Poszukujemy</a>
+        </div>
+      </div>
+
+      <div class="mobile-accordion">
+        <button class="w-full flex items-center justify-between py-3 font-mono text-[11px] uppercase tracking-widest text-ink/90 border-b border-ink/10">
+          Audytoriat <span class="text-[10px] transition-transform duration-200">▾</span>
+        </button>
+        <div class="hidden pl-4 pb-2 space-y-1">
+          <a href="#organizacja" class="block py-2 text-xs text-ink/75 hover:text-crimson">Organizacja</a>
+          <a href="#sklad-osobowy" class="block py-2 text-xs text-ink/75 hover:text-crimson">Skład osobowy</a>
+          <a href="#straty" class="block py-2 text-xs text-ink/75 hover:text-crimson">Straty bezpowrotne</a>
+          <a href="#biogramy" class="block py-2 text-xs text-ink/75 hover:text-crimson">Biogramy</a>
+        </div>
+      </div>
+
+      <div class="mobile-accordion">
+        <button class="w-full flex items-center justify-between py-3 font-mono text-[11px] uppercase tracking-widest text-ink/90 border-b border-ink/10">
+          Źródła prawa <span class="text-[10px] transition-transform duration-200">▾</span>
+        </button>
+        <div class="hidden pl-4 pb-2 space-y-1">
+          <a href="#i-wojna" class="block py-2 text-xs text-ink/75 hover:text-crimson">I wojna światowa</a>
+          <a href="#okres-wojen" class="block py-2 text-xs text-ink/75 hover:text-crimson">Okres wojen 1918–1921</a>
+          <a href="#miedzywojnie" class="block py-2 text-xs text-ink/75 hover:text-crimson">Okres międzywojnia</a>
+          <a href="#ii-wojna" class="block py-2 text-xs text-ink/75 hover:text-crimson">II wojna światowa</a>
+        </div>
+      </div>
+
+      <div class="mobile-accordion">
+        <button class="w-full flex items-center justify-between py-3 font-mono text-[11px] uppercase tracking-widest text-ink/90 border-b border-ink/10">
+          Literatura <span class="text-[10px] transition-transform duration-200">▾</span>
+        </button>
+        <div class="hidden pl-4 pb-2 space-y-1">
+          <a href="#ksiazki" class="block py-2 text-xs text-ink/75 hover:text-crimson">Książki</a>
+          <a href="#artykuly" class="block py-2 text-xs text-ink/75 hover:text-crimson">Artykuły</a>
+          <a href="#recenzje" class="block py-2 text-xs text-ink/75 hover:text-crimson">Recenzje</a>
+          <a href="#nowosci" class="block py-2 text-xs text-ink/75 hover:text-crimson">Nowości wydawnicze</a>
+        </div>
+      </div>
+
+      <div class="mobile-accordion">
+        <button class="w-full flex items-center justify-between py-3 font-mono text-[11px] uppercase tracking-widest text-ink/90 border-b border-ink/10">
+          Archiwalia <span class="text-[10px] transition-transform duration-200">▾</span>
+        </button>
+        <div class="hidden pl-4 pb-2 space-y-1">
+          <a href="#dokumenty" class="block py-2 text-xs text-ink/75 hover:text-crimson">Dokumenty</a>
+          <a href="#fotografie" class="block py-2 text-xs text-ink/75 hover:text-crimson">Fotografie</a>
+          <a href="#pieczecie" class="block py-2 text-xs text-ink/75 hover:text-crimson">Pieczęcie</a>
+          <a href="#zasob" class="block py-2 text-xs text-ink/75 hover:text-crimson">Zasób archiwalny</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-14 sm:pt-16">
+
+  <!-- SASH -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute -left-[10%] -right-[10%] top-[18%] sm:top-[21%] h-[64%] sm:h-[58%] -rotate-[4.5deg]
+                shadow-[0_25px_60px_rgba(0,0,0,.35),0_-6px_18px_rgba(0,0,0,.12)_inset]
+                bg-[linear-gradient(180deg,#FBF8F1_0%,#FBF8F1_49.3%,#8C1D2B_49.3%,#6B141F_100%)]">
+
+      <!-- fringe texture -->
+      <div class="absolute inset-0 opacity-50 bg-[repeating-linear-gradient(90deg,rgba(0,0,0,.06)_0px_2px,transparent_2px_14px)]"></div>
+
+      <!-- upper (cream) line -->
+      <div class="absolute left-0 right-0 top-0 h-[49.3%] flex items-center justify-center px-[8%] text-center"></div>
+
+      <!-- lower (crimson) line: INSTYTUT NAME -->
+      <div class="absolute left-0 right-0 bottom-[4%] sm:bottom-[6%] md:bottom-[8%] flex items-center justify-center px-4 sm:px-6 text-center">
+        <p class="font-mono text-[7px] sm:text-[9px] md:text-xs uppercase tracking-[0.12em] sm:tracking-[0.2em] md:tracking-[0.3em] text-cream/90 leading-relaxed">
+          Instytut Badawczy im. kpt. dr. Bolesława Zajączkowskiego
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Patron portrait: left side -->
+  <!-- Mobile: centered above title. Tablet+: left side positioned absolutely -->
+  <div class="relative z-20 flex justify-center
+              lg:absolute lg:left-6 xl:left-16 2xl:left-24 lg:top-1/2 lg:-translate-y-1/2
+              mb-4 sm:mb-6 lg:mb-0
+              self-start lg:self-auto
+              mt-20 sm:mt-24 lg:mt-0">
+    <div>
+      <div class="relative w-[120px] sm:w-[150px] md:w-[170px] lg:w-[190px] xl:w-[220px] 2xl:w-[230px]
+                  aspect-[3/4] overflow-hidden bg-paperdark border-2 border-ink
+                  shadow-[0_20px_40px_-18px_rgba(34,29,23,.45)]
+                  before:content-[''] before:absolute before:inset-0 before:pointer-events-none
+                  before:bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(34,29,23,.35)_100%)]
+                  after:content-[''] after:absolute after:inset-[6px] sm:after:inset-[9px] after:border after:border-cream/55 after:pointer-events-none">
+        <span class="absolute -top-0.5 -left-0.5 w-3 sm:w-4 h-3 sm:h-4 border-t-2 border-l-2 border-crimson z-10"></span>
+        <span class="absolute -top-0.5 -right-0.5 w-3 sm:w-4 h-3 sm:h-4 border-t-2 border-r-2 border-crimson z-10"></span>
+        <span class="absolute -bottom-0.5 -left-0.5 w-3 sm:w-4 h-3 sm:h-4 border-b-2 border-l-2 border-crimson z-10"></span>
+        <span class="absolute -bottom-0.5 -right-0.5 w-3 sm:w-4 h-3 sm:h-4 border-b-2 border-r-2 border-crimson z-10"></span>
+        <img src="img/zdjecie9.png" alt="Patron Instytutu"
+             class="w-full h-full object-cover object-[center_22%] scale-[1.04] grayscale sepia-[.28] contrast-[1.08] brightness-[.94]">
+      </div>
+      <div class="mt-3 sm:mt-4 relative border-[1.5px] border-ink bg-paper px-3 sm:px-4 py-1.5 sm:py-2 text-center
+                  before:content-[''] before:absolute before:inset-[4px] sm:before:inset-[5px] before:border before:border-ink before:opacity-55">
+        <p class="font-mono text-[7px] sm:text-[9px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-ink/60">Patron Instytutu</p>
+        <p class="font-display text-sm sm:text-base font-semibold mt-0.5 sm:mt-1 leading-tight">[ Imię i Nazwisko ]</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Godło: right side — hidden on mobile & tablet, visible from xl -->
+  <div class="hidden xl:flex flex-col items-center absolute right-10 2xl:right-24 top-1/2 -translate-y-1/2 z-20">
+    <div class="max-w-[150px] xl:max-w-[180px] 2xl:max-w-[210px]">
+      <img src="img/coat-of-arms-67863_1280.png" alt="Godło Rzeczypospolitej Polskiej"
+           class="w-full h-auto block drop-shadow-[0_20px_40px_rgba(34,29,23,.4)]">
+    </div>
+  </div>
+
+  <!-- TYTUŁ GŁÓWNY -->
+  <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center
+              -translate-y-4 sm:-translate-y-8 md:-translate-y-16">
+    <p class="fade-up [animation-delay:.25s] font-mono text-[9px] sm:text-[11px] md:text-xs uppercase tracking-[0.2em] sm:tracking-[0.35em] text-ink/70 mb-2 sm:mb-4">
+      Dzieje polskiego wymiaru sprawiedliwości
+    </p>
+
+    <h1 class="fade-up [animation-delay:.4s] font-display font-semibold leading-[1.05]
+               text-[28px] sm:text-5xl md:text-6xl lg:text-7xl
+               text-ink [-webkit-text-stroke:1px_#F1EBDC] sm:[-webkit-text-stroke:1.5px_#F1EBDC] [paint-order:stroke_fill]
+               [text-shadow:0_2px_0_rgba(251,248,241,.9),0_4px_12px_rgba(0,0,0,.35),0_1px_0_rgba(0,0,0,.2)]
+               sm:[text-shadow:0_2px_0_rgba(251,248,241,.9),0_6px_18px_rgba(0,0,0,.45),0_1px_0_rgba(0,0,0,.2)]">
+      HISTORIA<br>SĄDOWNICTWA<br>WOJSKOWEGO
+    </h1>
+  </div>
+
+  <!-- ROK ORAZ PRZYCISK "PRZEWIŃ" -->
+  <div class="absolute bottom-4 sm:bottom-6 md:bottom-10 left-0 right-0 z-20 text-center flex flex-col items-center px-4 sm:px-6">
+    <p class="fade-up [animation-delay:.55s] font-mono text-sm sm:text-lg md:text-xl tracking-[0.25em] sm:tracking-[0.4em] text-ink uppercase">
+      1915 — 1947
+    </p>
+
+    <a href="#wprowadzenie" class="fade-up [animation-delay:.65s] mt-2 sm:mt-4 inline-flex items-center gap-2 font-mono text-[9px] sm:text-[11px] uppercase tracking-widest text-ink/70 hover:text-crimson transition-colors">
+      Przewiń, aby poznać historię
+      <span class="inline-block animate-bounce">↓</span>
+    </a>
+  </div>
+
+</header>
+
+<!-- WPROWADZENIE -->
+<section id="wprowadzenie" class="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6">
+  <div class="max-w-3xl mx-auto text-center">
+    <p class="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-crimson mb-4 sm:mb-6">Wprowadzenie</p>
+    <h2 class="font-display text-2xl sm:text-3xl md:text-5xl font-semibold mb-6 sm:mb-8 leading-tight">
+      Trzy dekady prawa,<br>wojny i odbudowy
+    </h2>
+    <p class="text-base sm:text-lg md:text-xl leading-relaxed font-medium text-ink">
+      Od pierwszych sądów polowych formujących się jeszcze w cieniu I wojny światowej,
+      przez okres II Rzeczypospolitej i budowę niezależnego sądownictwa wojskowego,
+      aż po tragiczne lata okupacji i pierwsze powojenne lata przemian ustrojowych —
+      niniejsza wystawa przedstawia instytucje, ludzi i dokumenty, które współtworzyły
+      polski wymiar sprawiedliwości wojskowej w latach 1915–1947.
+    </p>
+    <p class="mt-4 sm:mt-6 text-xs sm:text-sm text-ink/55 italic">
+      Treść poglądowa — do uzupełnienia materiałem źródłowym klienta.
+    </p>
+  </div>
+</section>
+
+<!-- OŚ CZASU -->
+<section id="oswiata" class="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-paperdark/40">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-10 sm:mb-16">
+      <p class="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-crimson mb-3 sm:mb-4">Chronologia</p>
+      <h2 class="font-display text-2xl sm:text-3xl md:text-5xl font-semibold">Oś czasu 1915–1947</h2>
+    </div>
+
+    <div class="relative pl-6 sm:pl-8 md:pl-0">
+      <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] -translate-x-1/2
+                  bg-[linear-gradient(180deg,transparent,#8C1D2B_8%,#8C1D2B_92%,transparent)]"></div>
+      <div class="md:hidden absolute left-0 top-0 bottom-0 w-[2px]
+                  bg-[linear-gradient(180deg,transparent,#8C1D2B_8%,#8C1D2B_92%,transparent)]"></div>
+
+      <!-- Mobile dots -->
+      <style>
+        @media (max-width: 767px) {
+          .timeline-entry::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #8C1D2B;
+            box-shadow: 0 0 0 4px #E6DEC9;
+          }
+        }
+      </style>
+
+      <div class="space-y-10 sm:space-y-14 md:space-y-20">
+
+        <div class="relative timeline-entry md:grid md:grid-cols-2 md:gap-12 items-center">
+          <div class="md:text-right md:pr-12">
+            <p class="font-mono text-crimson text-xs sm:text-sm mb-1 sm:mb-2">1915</p>
+            <h3 class="font-display text-xl sm:text-2xl font-semibold mb-1 sm:mb-2">Pierwsze sądy polowe</h3>
+            <p class="text-sm sm:text-base text-ink/95">Kształtowanie się polskich formacji zbrojnych przynosi zalążki odrębnego sądownictwa wojskowego.</p>
+          </div>
+          <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-crimson ring-4 ring-paperdark"></div>
+        </div>
+
+        <div class="relative timeline-entry md:grid md:grid-cols-2 md:gap-12 items-center">
+          <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-crimson ring-4 ring-paperdark"></div>
+          <div></div>
+          <div class="md:pl-12">
+            <p class="font-mono text-crimson text-xs sm:text-sm mb-1 sm:mb-2">1919</p>
+            <h3 class="font-display text-xl sm:text-2xl font-semibold mb-1 sm:mb-2">Odrodzone Wojsko Polskie</h3>
+            <p class="text-sm sm:text-base text-ink/95">Powstają struktury sądownictwa wojskowego II Rzeczypospolitej, wraz z Naczelnym Sądem Wojskowym.</p>
+          </div>
+        </div>
+
+        <div class="relative timeline-entry md:grid md:grid-cols-2 md:gap-12 items-center">
+          <div class="md:text-right md:pr-12">
+            <p class="font-mono text-crimson text-xs sm:text-sm mb-1 sm:mb-2">1928</p>
+            <h3 class="font-display text-xl sm:text-2xl font-semibold mb-1 sm:mb-2">Kodyfikacja prawa wojskowego</h3>
+            <p class="text-sm sm:text-base text-ink/95">Ujednolicenie przepisów oraz reorganizacja sądów okręgowych i garnizonowych.</p>
+          </div>
+          <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-crimson ring-4 ring-paperdark"></div>
+        </div>
+
+        <div class="relative timeline-entry md:grid md:grid-cols-2 md:gap-12 items-center">
+          <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-crimson ring-4 ring-paperdark"></div>
+          <div></div>
+          <div class="md:pl-12">
+            <p class="font-mono text-crimson text-xs sm:text-sm mb-1 sm:mb-2">1939–1945</p>
+            <h3 class="font-display text-xl sm:text-2xl font-semibold mb-1 sm:mb-2">Wojna i okupacja</h3>
+            <p class="text-sm sm:text-base text-ink/95">Sądownictwo wojskowe działa na uchodźstwie i w konspiracji; dokumenty z tego okresu są szczególnie cenne historycznie.</p>
+          </div>
+        </div>
+
+        <div class="relative timeline-entry md:grid md:grid-cols-2 md:gap-12 items-center">
+          <div class="md:text-right md:pr-12">
+            <p class="font-mono text-crimson text-xs sm:text-sm mb-1 sm:mb-2">1947</p>
+            <h3 class="font-display text-xl sm:text-2xl font-semibold mb-1 sm:mb-2">Nowy porządek ustrojowy</h3>
+            <p class="text-sm sm:text-base text-ink/95">Zamknięcie omawianego okresu i początek głębokich przemian struktury sądownictwa wojskowego.</p>
+          </div>
+          <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-crimson ring-4 ring-paperdark"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-10 sm:mb-16">
+      <p class="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-crimson mb-3 sm:mb-4">Materiały źródłowe</p>
+      <h2 class="font-display text-2xl sm:text-3xl md:text-5xl font-semibold">Galeria archiwalna</h2>
+      <p class="mt-3 sm:mt-4 text-sm sm:text-base text-ink/60 max-w-xl mx-auto">Miejsce na fotografie, dokumenty i akta udostępnione przez klienta.</p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5">
+      <div class="relative bg-paperdark border border-ink/25 aspect-[3/4] flex items-center justify-center
+                  after:content-[''] after:absolute after:inset-[5px] sm:after:inset-[8px] after:border after:border-ink/30 after:pointer-events-none">
+        <span class="font-mono text-[8px] sm:text-[10px] uppercase tracking-widest text-ink/40">Fot. 01</span>
+      </div>
+      <div class="relative bg-paperdark border border-ink/25 aspect-[3/4] flex items-center justify-center col-span-1 md:col-span-1 md:row-span-2 md:aspect-auto
+                  after:content-[''] after:absolute after:inset-[5px] sm:after:inset-[8px] after:border after:border-ink/30 after:pointer-events-none">
+        <span class="font-mono text-[8px] sm:text-[10px] uppercase tracking-widest text-ink/40">Fot. 02</span>
+      </div>
+      <div class="relative bg-paperdark border border-ink/25 aspect-[3/4] flex items-center justify-center
+                  after:content-[''] after:absolute after:inset-[5px] sm:after:inset-[8px] after:border after:border-ink/30 after:pointer-events-none">
+        <span class="font-mono text-[8px] sm:text-[10px] uppercase tracking-widest text-ink/40">Fot. 03</span>
+      </div>
+      <div class="relative bg-paperdark border border-ink/25 aspect-[3/4] flex items-center justify-center
+                  after:content-[''] after:absolute after:inset-[5px] sm:after:inset-[8px] after:border after:border-ink/30 after:pointer-events-none">
+        <span class="font-mono text-[8px] sm:text-[10px] uppercase tracking-widest text-ink/40">Fot. 04</span>
+      </div>
+      <div class="relative bg-paperdark border border-ink/25 aspect-[3/4] flex items-center justify-center
+                  after:content-[''] after:absolute after:inset-[5px] sm:after:inset-[8px] after:border after:border-ink/30 after:pointer-events-none">
+        <span class="font-mono text-[8px] sm:text-[10px] uppercase tracking-widest text-ink/40">Fot. 05</span>
+      </div>
+      <div class="relative bg-paperdark border border-ink/25 aspect-[3/4] flex items-center justify-center
+                  after:content-[''] after:absolute after:inset-[5px] sm:after:inset-[8px] after:border after:border-ink/30 after:pointer-events-none">
+        <span class="font-mono text-[8px] sm:text-[10px] uppercase tracking-widest text-ink/40">Fot. 06</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTYTUCJE -->
+<section id="instytucje" class="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-ink text-paper">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-10 sm:mb-16">
+      <p class="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-gold mb-3 sm:mb-4">Struktura</p>
+      <h2 class="font-display text-2xl sm:text-3xl md:text-5xl font-semibold">Instytucje sądownictwa wojskowego</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+      <div class="border-t border-paper/25 pt-4 sm:pt-6">
+        <h3 class="font-display text-lg sm:text-xl font-semibold mb-2">Naczelny Sąd Wojskowy</h3>
+        <p class="text-paper/90 text-sm leading-relaxed">Najwyższa instancja sądownictwa wojskowego II Rzeczypospolitej, siedziba centralna spraw kasacyjnych.</p>
+      </div>
+      <div class="border-t border-paper/25 pt-4 sm:pt-6">
+        <h3 class="font-display text-lg sm:text-xl font-semibold mb-2">Sądy okręgów wojskowych</h3>
+        <p class="text-paper/90 text-sm leading-relaxed">Instancje pierwszego stopnia działające przy okręgach korpusów, rozpatrujące sprawy dyscyplinarne i karne.</p>
+      </div>
+      <div class="border-t border-paper/25 pt-4 sm:pt-6 sm:col-span-2 md:col-span-1">
+        <h3 class="font-display text-lg sm:text-xl font-semibold mb-2">Sądy polowe i garnizonowe</h3>
+        <p class="text-paper/90 text-sm leading-relaxed">Organy orzekające bezpośrednio przy jednostkach, w tym w warunkach polowych czasu wojny.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-8 sm:py-10 px-4 sm:px-6 border-t border-ink/15 text-center">
+  <p class="font-mono text-[8px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.25em] text-ink/50">
+    Historia Sądownictwa Wojskowego 1915–1947 · Materiał roboczy do weryfikacji
+  </p>
+</footer>
+
+<script>
+  // Mobile hamburger menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+  let menuOpen = false;
+
+  menuBtn.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle('hidden');
+    if (menuOpen) {
+      bar1.style.transform = 'rotate(45deg) translate(4px, 4px)';
+      bar2.style.opacity = '0';
+      bar3.style.transform = 'rotate(-45deg) translate(4px, -4px)';
+    } else {
+      bar1.style.transform = '';
+      bar2.style.opacity = '';
+      bar3.style.transform = '';
+    }
+  });
+
+  // Mobile accordion
+  document.querySelectorAll('.mobile-accordion button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling;
+      const arrow = btn.querySelector('span');
+      const isOpen = !content.classList.contains('hidden');
+
+      // Close all
+      document.querySelectorAll('.mobile-accordion button + div').forEach(d => d.classList.add('hidden'));
+      document.querySelectorAll('.mobile-accordion button span').forEach(s => s.style.transform = '');
+
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        arrow.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+  // Close mobile menu on link click
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuOpen = false;
+      bar1.style.transform = '';
+      bar2.style.opacity = '';
+      bar3.style.transform = '';
+    });
+  });
+</script>
+
+</body>
+</html>
