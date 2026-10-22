@@ -4,13 +4,18 @@ async function loadNavbar() {
   if (!mount) return;
 
   try {
-    const response = await fetch('/navbar.html');
+    const siteRoot = new URL(mount.dataset.siteRoot || './', document.baseURI);
+    const response = await fetch(new URL('navbar.html', siteRoot));
 
     if (!response.ok) {
       throw new Error(`Nie udało się wczytać navbara: ${response.status}`);
     }
 
     mount.innerHTML = await response.text();
+    mount.querySelectorAll('a[href^="/"]').forEach((link) => {
+      const path = link.getAttribute('href');
+      link.href = path === '/' ? siteRoot.href : new URL(path.slice(1), siteRoot).href;
+    });
     initializeNavbar(mount);
   } catch (error) {
     console.error(error);
