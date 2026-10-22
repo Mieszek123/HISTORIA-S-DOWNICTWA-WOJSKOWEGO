@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@source "./";
+
+@theme {
+  --color-paper: #F1EBDC;
+  --color-paperdark: #E6DEC9;
+  --color-ink: #221D17;
+  --color-cream: #FBF8F1;
+  --color-gold: #A8874F;
+  --color-crimson: #8C1D2B;
+  --color-crimson-deep: #6B141F;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "PT Serif", serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+/* Butelkowozielony navbar tylko na stronach z klasą theme-patron na <body>. */
+body.theme-patron #site-nav nav {
+  color: #e1eee5;
+  background-color: #123b2d;
+  border-color: rgb(225 238 229 / 22%);
+}
+
+body.theme-patron #site-nav #desktopMenu {
+  color: #e1eee5;
+}
+
+body.theme-patron #site-nav nav > div > a {
+  color: #e1eee5;
+}
+
+body.theme-patron #site-nav nav > div > a:hover {
+  color: #b8d8c3;
+}
+
+body.theme-patron #site-nav #desktopMenu a,
+body.theme-patron #site-nav #mobileMenuItems a,
+body.theme-patron #site-nav #mobileMenuItems button {
+  color: #e1eee5;
+}
+
+body.theme-patron #site-nav #desktopMenu > .group > div {
+  color: #e1eee5;
+  background-color: #174b39;
+  border-color: rgb(225 238 229 / 22%);
+}
+
+body.theme-patron #site-nav #desktopMenu a:hover,
+body.theme-patron #site-nav #mobileMenuItems a:hover {
+  color: #b8d8c3;
+}
+
+body.theme-patron #site-nav #mobileMenu {
+  background-color: #123b2d;
+  border-color: rgb(225 238 229 / 22%);
+}
+
+body.theme-patron #site-nav #mobileMenuItems button {
+  border-color: rgb(225 238 229 / 15%);
+}
+
+body.theme-patron #site-nav #bar1,
+body.theme-patron #site-nav #bar2,
+body.theme-patron #site-nav #bar3 {
+  background-color: #e1eee5;
+}
+
+body.theme-patron {
+  background-color: #123b2d;
+  color: #fff;
+}
+

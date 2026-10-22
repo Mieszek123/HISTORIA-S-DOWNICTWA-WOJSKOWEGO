@@ -1,0 +1,120 @@
+<!-- NAV -->
+<nav class="fixed top-0 inset-x-0 z-30 bg-paper/90 backdrop-blur border-b border-ink/15">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3 flex items-center">
+    <a href="/" aria-label="Strona główna" title="Strona główna"
+       class="inline-flex shrink-0 items-center justify-center p-2 -ml-2 mr-8 md:mr-12 text-ink/80 hover:text-crimson transition-colors"
+       aria-current="page">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true">
+        <path d="m3 10 9-7 9 7" />
+        <path d="M5 9v11h14V9M9 20v-6h6v6" />
+      </svg>
+    </a>
+
+    <!-- Hamburger button (mobile) -->
+    <button id="menuBtn" class="md:hidden ml-auto flex flex-col gap-[5px] p-2 -mr-2" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false">
+      <span class="block w-5 h-[1.5px] bg-ink transition-all duration-300" id="bar1"></span>
+      <span class="block w-5 h-[1.5px] bg-ink transition-all duration-300" id="bar2"></span>
+      <span class="block w-5 h-[1.5px] bg-ink transition-all duration-300" id="bar3"></span>
+    </button>
+
+    <!-- Desktop nav -->
+    <div id="desktopMenu" class="hidden md:flex w-full justify-between font-mono font-medium text-[13px] lg:text-[15px] tracking-wide text-ink/95">
+
+      <div class="group relative">
+        <a href="#o-nas" class="relative pb-[5px] hover:text-crimson transition-colors
+                  after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-[2px] after:h-px after:bg-crimson
+                  after:scale-x-0 after:origin-center after:transition-transform after:duration-200
+                  group-hover:after:scale-x-100">
+          O nas <span class="inline-block ml-1 text-[10px] transition-transform duration-200 group-hover:rotate-180">▾</span>
+        </a>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1.5 min-w-[230px] py-3
+                    bg-paper border border-ink/15 shadow-[0_14px_28px_-12px_rgba(34,29,23,0.32)]
+                    opacity-0 pointer-events-none transition-all duration-200
+                    group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0">
+          <a href="/O_nas/Patron/" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Patron</a>
+          <a href="#instytut" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Instytut</a>
+          <a href="#kontakt" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Kontakt</a>
+          <a href="#poszukujemy" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Poszukujemy</a>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <a href="#audytoriat" class="relative pb-[5px] hover:text-crimson transition-colors
+                  after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-[2px] after:h-px after:bg-crimson
+                  after:scale-x-0 after:origin-center after:transition-transform after:duration-200
+                  group-hover:after:scale-x-100">
+          Audytoriat <span class="inline-block ml-1 text-[10px] transition-transform duration-200 group-hover:rotate-180">▾</span>
+        </a>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1.5 min-w-[230px] py-3
+                    bg-paper border border-ink/15 shadow-[0_14px_28px_-12px_rgba(34,29,23,0.32)]
+                    opacity-0 pointer-events-none transition-all duration-200
+                    group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0">
+          <a href="#organizacja" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Organizacja</a>
+          <a href="#sklad-osobowy" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Skład osobowy</a>
+          <a href="#straty" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Straty bezpowrotne</a>
+          <a href="#biogramy" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Biogramy</a>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <a href="#zrodla-prawa" class="relative pb-[5px] hover:text-crimson transition-colors
+                  after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-[2px] after:h-px after:bg-crimson
+                  after:scale-x-0 after:origin-center after:transition-transform after:duration-200
+                  group-hover:after:scale-x-100">
+          Źródła prawa <span class="inline-block ml-1 text-[10px] transition-transform duration-200 group-hover:rotate-180">▾</span>
+        </a>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1.5 min-w-[230px] py-3
+                    bg-paper border border-ink/15 shadow-[0_14px_28px_-12px_rgba(34,29,23,0.32)]
+                    opacity-0 pointer-events-none transition-all duration-200
+                    group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0">
+          <a href="#i-wojna" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">I wojna światowa</a>
+          <a href="#okres-wojen" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Okres wojen 1918–1921</a>
+          <a href="#miedzywojnie" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Okres międzywojnia</a>
+          <a href="#ii-wojna" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">II wojna światowa</a>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <a href="#literatura" class="relative pb-[5px] hover:text-crimson transition-colors
+                  after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-[2px] after:h-px after:bg-crimson
+                  after:scale-x-0 after:origin-center after:transition-transform after:duration-200
+                  group-hover:after:scale-x-100">
+          Literatura <span class="inline-block ml-1 text-[10px] transition-transform duration-200 group-hover:rotate-180">▾</span>
+        </a>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1.5 min-w-[230px] py-3
+                    bg-paper border border-ink/15 shadow-[0_14px_28px_-12px_rgba(34,29,23,0.32)]
+                    opacity-0 pointer-events-none transition-all duration-200
+                    group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0">
+          <a href="#ksiazki" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Książki</a>
+          <a href="#artykuly" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Artykuły</a>
+          <a href="#recenzje" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Recenzje</a>
+          <a href="#nowosci" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Nowości wydawnicze</a>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <a href="#archiwalia" class="relative pb-[5px] hover:text-crimson transition-colors
+                  after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-[2px] after:h-px after:bg-crimson
+                  after:scale-x-0 after:origin-center after:transition-transform after:duration-200
+                  group-hover:after:scale-x-100">
+          Archiwalia <span class="inline-block ml-1 text-[10px] transition-transform duration-200 group-hover:rotate-180">▾</span>
+        </a>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1.5 min-w-[230px] py-3
+                    bg-paper border border-ink/15 shadow-[0_14px_28px_-12px_rgba(34,29,23,0.32)]
+                    opacity-0 pointer-events-none transition-all duration-200
+                    group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0">
+          <a href="#dokumenty" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Dokumenty</a>
+          <a href="#fotografie" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Fotografie</a>
+          <a href="#pieczecie" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Pieczęcie</a>
+          <a href="#zasob" class="block px-6 py-2.5 whitespace-nowrap text-xs tracking-wider normal-case text-ink/85 hover:text-crimson hover:bg-crimson/5">Zasób archiwalny</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="md:hidden hidden border-t border-ink/15 bg-paper/95 backdrop-blur">
+    <div id="mobileMenuItems" class="max-h-[70vh] overflow-y-auto px-4 py-4 space-y-1"></div>
+  </div>
+</nav>
